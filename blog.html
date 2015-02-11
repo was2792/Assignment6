@@ -1,0 +1,129 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="blog.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>Alex's Blog</title>
+</head>
+
+<body>
+<div class="container">
+<div class="jumbotron">
+  <h1>Alex's Blog</h1>
+  <p>Welcome to my blog where you can learn anything and everything<br>about the wonderful world of AngularJS!</p>
+  <p><a class="btn btn-primary btn-lg" href="http://campus.codeschool.com/courses/shaping-up-with-angular-js" role="button">Take a free Angular Course</a></p>
+</div>
+
+<div class="row">
+	<div class="col-md-8" id="special"><h2>What makes AngularJS special?</h2>
+<p>Misko Hevery co-author of AngularJS says that the thing that really hits home about AngularJS is that they have the idea of using a directive, 
+and rather than writing everything inside of JS and then having multiple templates you can write a lot of html and the html will drive the assembly of your application.</p>
+</div>
+	<div class="col-md-4" id="choose"><h2>Why Choose Angular?</h2>
+<p>AngularJS fills the holes in html because it can be used for more dynamic views in your web applications.  
+Its easy to read and its quick to develop which makes it very efficient code.</p>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-12"><h1>Come Read About Angular!</h1>
+	</div>
+</div>
+
+<div class="row" id="directives">
+	
+	<div class="col-md-12" id="directives"><h2>Directives</h2>
+	<p>AngularJS directives are HTML attributes with an ng prefix. There are many different ng prefixes including ng-ap which tells angular js that the div element is the owner of the AngularJS application.
+The ng-model directive binds the value of the input field to the application variable name and the ng-bind directive binds the innerHTML of the p element to the application variable name.  These are just a view of the directives there are many more.
+<br><br> Take a look at these 4 examples below <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></p>
+</div>
+</div>
+
+<div class="row" id="directives">
+	<div class="col-md-3"><h2>The ng-app Directive</h2>
+	<p>The ng-app directive will auto-bootstrap the application when a web page is loaded.  It can also have a value to connect to code modules!</p>
+	</div>
+	<div class="col-md-3"><h2>The ng-init Directive</h2>
+	<p>The ng-init directive can define initial values for your application.  You will normally use a controller of module instead.</p>
+	</div>
+	<div class="col-md-3"><h2>The ng-model Directive</h2>
+	<p>The ng-model directive binds the value of HTML controls to application data.  It can also provide validation, CSS classes, and status for applicaton data!</p>
+	</div>
+	<div class="col-md-3"><h2>The ng-repeat Directive</h2>
+	<p>Text about objects here!</p>
+	</div>
+	</div>
+
+<div class="row" id="controllers">
+	
+	<div class="col-md-12" id="Directives"><h2>Controllers</h2>
+	<p>AngularJS applications are controlled by controllers.
+
+The ng-controller directive defines the application controller.
+
+A controller is a JavaScript Object, created by a standard JavaScript object constructor.
+<br><br> Take a look at these 2 examples below <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></p>
+</div>
+</div>
+
+
+<div class="row" id="controllers">
+<div class="col-md-6"><h2>Example Controller File</h2>
+	<p>function namesController($scope) {<br>
+    $scope.names = [<br>
+        {name:'Jani',country:'Norway'},<br>
+        {name:'Hege',country:'Sweden'},<br>
+        {name:'Kai',country:'Denmark'}<br>
+    ];
+}</p>
+	</div>
+	<div class="col-md-6"><h2>Call Controller File in an App</h2>
+	<p>div ng-app"" ng-controller="namesController"<br>
+	li ng-repeat="x in names"<br>
+	{{x.name+', ' + x.country}}<br>
+	/li<br>
+	/div<br>
+	script src="namesController.js" /script</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8" id="objects"><h2>Objects</h2>
+	<p>Angular JS objects are like JavaScript objects!<br><br>
+    div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}"><br>
+
+The name is {{ person.lastName }}
+
+</p>
+	</div>
+	<div class="col-md-4" id="expressions"><h2>Expressions</h2>
+	<p>AngularJS expressions are written inside double braces: {{ expression }}.
+
+AngularJS expressions binds data to HTML the same way as the ng-bind directive.
+
+AngularJS will "output" data exactly where the expression is written.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4" id="databinding"><h2>Data Binding</h2>
+	<p>The {{ firstName }} expression, in the example above, is an AngularJS data binding expression.
+
+Data binding in AngularJS, synchronizes AngularJS expressions with AngularJS data.
+
+{{ firstName }} is synchronized with ng-model="firstName".
+
+In the next example two text fields are synchronized with two ng-model directives.</p>
+	</div>
+	<div class="col-md-8" id="modules"><h2>Modules</h2>
+	<p>You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc. It can be declared in javascript by using:<br><br> var myAppModule = angular.module('myApp', []);
+    </p>
+	</div>
+	</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
