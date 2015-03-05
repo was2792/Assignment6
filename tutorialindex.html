@@ -1,55 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="tutorialStore">
   <head>
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
-  <body class="list-group" ng-controller="TutorialController as tutorial">
-    <header>
-      <h1 class="text-center">Tutorials</h1>
-      <h2 class="text-center">For Angular JS</h2>
-    </header>
-    <div class="list-group-item" ng-repeat="tutorial in store.tutorials">
-      <h3>
-        {{tutorial.title}}
-      </h3>
-
-       <!-- Image Gallery  -->
-      <div class='gallery' ng-controller="GalleryController as gallery"  ng-show="tutorial.images.length">
-        <div class="img-wrap">
-          <img ng-src="{{tutorial.image[gallery.current]}}" />
-        </div>
-        <ul class="img-thumbnails clearfix">
-          <li class="small-image pull-left thumbnail" ng-repeat="image in tutorial.image">
-            <img ng-src="{{image}}" />
-          </li>
-        </ul>
-      </div>
-
-
-      <section class="tab" ng-controller="TabController as tab">
-        <ul class="nav nav-pills">
-          <li ng-class="{ active: tab.isSet(1) }">
-            <a href ng-click="tab.setTab(1)">Follow this URL!</a></li>
-          <li ng-class="{ active: tab.isSet(2) }">
-            <a href ng-click="tab.setTab(2)">Author</a></li>
-          <li ng-class="{ active: tab.isSet(3) }">
-            <a href ng-click="tab.setTab(3)">Description</a></li>
-        </ul>
-        <div ng-show="tab.isSet(1)">
-          <h4>Description</h4>
-          <blockquote>{{tutorial.url}}</blockquote>
-        </div>
-        <div ng-show="tab.isSet(2)">
-          <h4>Specs</h4>
-          <blockquote>Shine: {{tutorial.author}}</blockquote>
-        </div>
-        <div ng-show="tab.isSet(3)">
-          <h4>Description</h4>
-          <blockquote>Description: {{tutorial.Description}}</blockquote>
-        </div>
-      </section>
-    </div>
+  <body>
+	<h3>Test</h3>
+	<div ng-controller="TabController as tab">
+		{{tab.tutorial}}
+	</div>	
   </body>
 </html>
